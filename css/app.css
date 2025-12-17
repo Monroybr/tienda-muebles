@@ -341,6 +341,12 @@ img{
     color:#5E27F5
 }
 
+/*Pagina contenido entrada*/
+.contenido-entrada-blog{
+    width: 80rem;
+    margin: 0 auto;
+    background-color: #fff;
+}
 
 
 
