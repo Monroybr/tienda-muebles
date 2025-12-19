@@ -39,6 +39,80 @@ family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <main class="contenido-principal contenedor">
         <h2 class="text-center">Contacto</h2>
 
+        <form>
+
+            <fieldset>
+                <legend>Tus datos</legend>
+                <div class="campo">
+
+                    <label for="nombre">Nombre:</label>
+                    <input  id="nombre" type="text" placeholder="Ingresa nombre completo">
+                </div>
+
+                <div class="campo">
+                    <label for="asunto">Asunto:</label>
+                    <input id="asunto" type="text" placeholder="asunto">
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">teléfono:</label>
+                    <input id="telefono" type="tel" placeholder="Ingresa tu teléfono">
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+                    <input id="email" type="email" placeholder="Ingresa tu e-mail">
+                </div>
+
+                <div class="campo">
+                    <label for="fecha">Fecha:</label>
+                    <input id="fecha" type="date">
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea rows="10" cols="20"></textarea>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Pais</legend>
+
+                <div class="campo">
+                    <label>País</label>
+                    <select id="pais">
+                        <option value="" disabled>--Seleccione--- <option>
+                        <option value="CO" selected>Colombia</option>
+                        <option value="PR">Perú</option>
+                        <option value="MX">México</option>
+                        <option value="AR">Argentina</option>
+                        <option value="CL">Chile</option>
+                        <option value="BO">Bolivia</option>
+                    </select>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Informacion extra</legend>
+                
+                <div class="campo">
+                    <label for="cliente">Cliente</label>
+                    <input  id="cliente" type="radio" name="tipo" value="cliente">
+
+                </div>
+
+
+                <div class="campo">
+                    <label for="proveedor">Proveedor</label>
+                    <input  id="proveedor" type="radio" name="tipo" value="proveedor">
+
+                </div>
+
+            </fieldset>
+
+        </form>
          
 
     </main>
