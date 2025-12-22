@@ -58,10 +58,12 @@ img{
     padding: 1rem;
     transition: background-color 0.9s ease-out;
     text-align: center;
+    border: none;
 }
 
 .boton:hover{
     background-color: #769c02;
+    cursor: pointer;
 }
 
 
@@ -365,6 +367,50 @@ img{
     width: 40rem;
     object-fit: cover;
 }
+
+/*Página contacto - formulario*/
+
+.formulario{
+    max-width: 60rem;
+    margin: 0 auto; /*para que el contenido este centrado*/
+
+}
+
+.formulario fieldset{
+    border: 2px solid black;
+    margin-bottom: 2rem;
+}
+
+.formulario legend{
+    background-color: #8B63F8;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+
+}
+
+.campo label{
+flex-basis: 10rem;
+}
+
+.campo input:not([type="radio"]), 
+.campo select, 
+.campo textarea{
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
+
+
 
 
 
