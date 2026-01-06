@@ -23,15 +23,33 @@ h1, h2, h3 {
 }
 
 h1{
-    font-size: 5rem;
+    font-size: 4.5rem;
+}
+
+@media (max-width: 768px){
+    h1{
+        font-size: 5rem;
+    }
 }
 
 h2{
-    font-size: 3rem;
+    font-size: 3.5rem;
+}
+
+@media (min-width: 768px){
+    h2{
+        font-size: 4rem;
+    } 
 }
 
 h3 {
-  font-size: 3rem;  
+  font-size: 2.5rem;  
+}
+
+@media (min-width: 768px){
+    h3 {
+        font-size: 3rem;  
+    }
 }
 
 a {
@@ -95,23 +113,30 @@ img{
 }
 
 .contenedor-nav{
-    border-top: .3rem solid #e1e1e1;
+    border-top: 0.3rem solid #e1e1e1;
     
 }
 
 .navegacion-principal{
     padding: 2rem 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     font-size: 2rem;
-    transition: background-color 1s ease-out;
+    transition:  1s ease-out;
 }
 
 .navegacion-principal a:hover{
     background-color:#8B63F8; 
     color:#ffffff;
-    
-    
+}
+
+@media (min-width: 768px){
+    .navegacion-principal{
+        padding: 2rem 0;
+        justify-content: space-between;
+        flex-direction: row;
+    }
 }
 
 .hero{/**imagen de la navegacion principal*/
@@ -119,23 +144,39 @@ img{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height:55rem;
+    height:25rem;
 }
 
-
+@media (min-width: 768px){
+    .hero{/**imagen de la navegacion principal*/
+        height:55rem;
+    }  
+}
 /**categorias*/
 
 .categorias{
-    padding-top:5rem;
+    padding:5rem 0;
+}
+.categoria{
+    margin-bottom: 2rem;
 }
 
+@media (min-width: 768px){
+      .categoria{
+        margin-bottom: 0;
+      }
+}
+
+.categoria img{
+    width: 100%;
+}
 
 .categoria a{
     text-align: center;
     display: block;
     padding: 2rem;
     font-size: 2rem;
-    transition: background-color 1s ease-out;
+    transition: 1s ease-out;
 }
 
 .categoria a:hover{
@@ -144,47 +185,62 @@ img{
     border-bottom-right-radius: 2rem;
 }
 
-.listado-categorias{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:2rem; 
-   
+@media (min-width: 768px){
+    .listado-categorias{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:2rem; 
+    }  
 }
 
 /**bloque nosotros*/
 .sobre-nosotros{ /*funcion para hacer un degradado*/
     /*background-image: linear-gradient(to right, black 50%, red 100%);*/
-    background-image: linear-gradient(to right, transparent 50%, #8B63F8 50%, #5E27F5 100% ), url(../img/nosotros.jpg);
+    background-image: linear-gradient(to bottom, transparent 50%, #8B63F8 50%, #5E27F5 100% ), url(../img/nosotros.jpg);
     background-position: left center;
-    padding: 4rem 0;
     background-repeat: no-repeat;
-    background-size: 100%, 80rem;
+    background-size: 100%, 110rem;
+}
+@media (min-width: 760px){
+    .sobre-nosotros{ /*funcion para hacer un degradado*/
+        /*background-image: linear-gradient(to right, black 50%, red 100%);*/
+        background-image: linear-gradient(to right, transparent 50%, #8B63F8 50%, #5E27F5 100% ), url(../img/nosotros.jpg);
+    } 
 }
 
 .sobre-nosotros-grid{
-
-    display: flex;
-    justify-content: flex-end;
-
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
     /*display: grid;
     grid-template-columns: repeat(2,1fr);
     column-gap: 8rem;
     /*no se utiliza padding con los grid, se maneja con los gap*/
-    
+}
+
+@media (min-width: 768px){
+    .sobre-nosotros-grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: unset;
+        column-gap: 10rem;
+    }   
 }
 
 .nosotros-texto{
-    flex-basis: 50%;
-    padding-left: 10rem;
+    grid-row: 2/3;
     color: #fff;
+    padding: 5rem;
+}
+
+@media (min-width: 768px){
+    .nosotros-texto{
+        grid-column: 2/3;
+    }
 }
 
 /**Listado de productos */
 
 .contenido-principal{
-    padding-top: 5rem;
-    
-    
+    padding-top: 5rem; 
     
 }
 /**Seccion nuestros productos**/
